@@ -1,9 +1,14 @@
+require('dotenv').config();
 const mongoose = require('mongoose');
 
-// Reemplaza <password> y <dbname> con tus credenciales
-const uri = 'mongodb+srv://wentl:Jangel05$@cluster0.eulny.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+// Acceder a la variable de entorno MONGO_URI
+const dbUri = process.env.MONGO_URI;
 
-mongoose.connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
-  .then(() => console.log('MongoDB connected successfully'))
-  .catch(err => console.error('Error connecting to MongoDB:', err));
+mongoose.connect(dbUri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => console.log('MongoDB connected successfully'))
+.catch(err => console.error('Error connecting to MongoDB:', err));
+
 
