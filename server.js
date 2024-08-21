@@ -10,7 +10,7 @@ app.use(cors());
 
 app.use(express.json());
 
-mongoose.connect('mongodb+srv://wentl:<password>@cluster0.eulny.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect('mongodb+srv://wentl:Jangel05$@cluster0.eulny.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
