@@ -17,8 +17,8 @@ mongoose.connect('mongodb+srv://wentl:Jangel05$@cluster0.eulny.mongodb.net/?retr
 .then(() => console.log('MongoDB connected successfully'))
 .catch(err => console.log('Error connecting to MongoDB:', err));
 
-app.get('/', (req, res) => {
-  res.send('Hello, world!');
+app.get('/api/login', (req, res) => {
+  res.json({ message: 'Login endpoint funciona correctamente' });
 });
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
